@@ -8,13 +8,13 @@ You will need to clone this repo and add a new clusters in the `/clusters` direc
 
 In other changes, if you copied `local.home` change the wildcard `apps.home.ocplab.com` in the two URLS to your OpenShift's wildcard domain
 
-Once this is done, you can then deploy this application manually to OpenShift with kustomize using the following command:
+Once this is done, you can either deploy the application directly or via GitOps. To deploy this application directly to OpenShift with kustomize using the following command:
 
 ```
 oc apply -k clusters/<YOUR-CLUSTER>/overlays/basic
 ```
 
-To add it in OpenSshift GitOps first install the operator, the easiest way is to use the (https://github.com/gnunn-gitops/gitops-operator-install)[gitops-operator-install] repo which will confirm everything for you. Alternatively you can install it manually via the console as well in Operator Hub.
+To deploy it in OpenSshift GitOps first install the operator, the easiest way is to use the (https://github.com/gnunn-gitops/gitops-operator-install)[gitops-operator-install] repo which will confirm everything for you. Alternatively you can install it manually via the console as well in Operator Hub.
 
 Once you have the operator, simply create a new application as per the image below:
 
