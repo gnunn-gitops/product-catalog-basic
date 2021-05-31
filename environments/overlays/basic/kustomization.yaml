@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: product-catalog
+
+bases:
+- github.com/gnunn-gitops/product-catalog/components/apps/database/base
+- github.com/gnunn-gitops/product-catalog/components/apps/client/base
+- github.com/gnunn-gitops/product-catalog/components/apps/server/base
+
+resources:
+- namespace.yaml
+
+images:
+- name: quay.io/gnunn/client
+  newTag: latest
+- name: quay.io/gnunn/server
+  newTag: latest
