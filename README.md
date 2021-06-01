@@ -16,4 +16,4 @@ Once you have the operator, simply create a new application as per the image bel
 
 ![alt text](https://raw.githubusercontent.com/gnunn-gitops/product-catalog-basic/master/docs/images/argocd-create-app.png)
 
-Make sure to change the cluster name, `aws.cluster`, in the path to your cluster name.
+Note the git path should be `environments/overlays/basic`.
